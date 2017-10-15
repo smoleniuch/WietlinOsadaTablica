@@ -1,3 +1,15 @@
 {
-  "presets": ["react-native"]
+  "presets": ["react-native"],
+
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./app"],
+      "alias": {
+        "^screens/(.+)": "screens/\\1",
+        "^components/(.+)":"components/\\1",
+        "^styles/(.+)":"styles/\\1"
+      }
+    }]
+  ]
+
 }
